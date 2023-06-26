@@ -1,0 +1,254 @@
+body {  
+    background : #E3F6FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.container {
+    height: 700px;
+    margin : 20px 20px 0 20px;
+    background: #E3F4F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    overflow-y: scroll;
+    
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-container .hamburger {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.input-container input {
+    width: 500px; 
+    padding: 5px 0;
+    margin: 10px;
+}
+
+/* Styling Table */
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    width: 550px;
+    overflow-y: scroll;
+
+}
+  
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+thead th {
+    background-color: gold;
+    font-weight: bold;
+}
+
+.display-none {
+    display: none;
+}
+
+
+.display-items {
+    width: 200px;
+    height: 150px;
+    max-height: 180px;
+    position: absolute;
+    top: 65px;
+    left: 65%;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    background: #ECF9FF;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.display-items p{
+    padding: 10px 0;
+    font-weight: 600;
+    
+}
+
+/* @ Media Queries*/
+@media only screen and (max-width: 600px) {
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 430px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 400px; 
+        padding: 5px 0;
+        margin: 10px;
+    }
+
+    .display-items {
+        left: 50%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 490px) {
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 330px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 300px; 
+        padding: 5px 0;
+        margin: 10px;
+    }
+
+    .display-items {
+        left: 40%;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 260px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 240px; 
+        padding: 5px 0;
+        margin: 10px;
+    }
+
+    .display-items {
+        left: 30%;
+        top: 70px;
+        width: 200px;
+        height: 100px;
+        font-size: 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 360px) {
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 210px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 200px; 
+        padding: 5px 0;
+        margin: 10px;
+    }
+
+    .container .hamburger{
+        margin-left:30px ;
+    }
+
+    .display-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+}
+
+@media only screen and (max-width: 285px) {
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 180px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 170px; 
+        padding: 5px 10px 0 0;
+        margin: 10px;
+    }
+
+    .container .hamburger {
+        margin-left: 15px;
+
+    }
+
+    .display-items {
+        left: 30%;
+        padding: 5px;
+        width: 150px;
+    }
+
+    .display-items p{
+        padding: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 220px) {
+
+
+    table {
+        border-collapse: collapse;
+        margin: 10px;
+        width: 150px;
+        overflow-y: scroll;
+    
+    }
+
+    .container input {
+        width: 130px; 
+        padding: 5px 10px 0 0;
+        margin: 10px;
+    }
+
+    .container .hamburger {
+        margin-left: 15px;
+
+    }
+
+    .display-items {
+        left: 20%;
+        padding: 5px;
+        width: 180px;
+    }
+
+    .display-items p{
+        padding: 0;
+    }
+    
+}
