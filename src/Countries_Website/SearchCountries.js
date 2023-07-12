@@ -28,14 +28,7 @@ function SearchCountries() {
         });
         setSearch(updateItems)
     }
-
-    const filterArea = (catArea) => {
-        const updateArea = data.filter((curArea) =>{
-            return curArea.area < catArea
-        });
-        setSearch(updateArea)
-    }
-
+    
     const handleSearch = (event) => {
         let value = event.target.value;
         let result = [];
@@ -45,22 +38,22 @@ function SearchCountries() {
         });
         setSearch(result);
         }
- 
-
-
   return (
+<div className='background-image'>
     <section className='container'>
         <div className='input-container'>
            <input onChange={(event)=>handleSearch(event)} type='text' placeholder='Search By Country Name '/>
            <div className='hamburger' onClick={handleClick}>
              <i className={click ? 'fas fa-bars' : 'fas fa-times'} />
-
-             <div className={click ? 'display-none' : 'display-items'}>            
-                <div onClick={()=>filterRegion('Oceania')}><p>Countries Under Oceania </p></div>
-                <div  onClick={()=>filterArea(65300)}><p>Countries Smaller Than  Lithuania</p></div>
+             <div className={click ? 'display-none' : 'display-items'}> 
+                <div onClick={()=>filterRegion('Asia')}><p id='asia'>→ Asian Countries</p></div>
+                <div onClick={()=>filterRegion('Africa')}><p id='africa'>→ African Countries</p></div>
+                <div onClick={()=>filterRegion('Europe')}><p id='europe'>→ European Countries</p></div>
+                <div onClick={()=>filterRegion('Americas')}><p id='americas'>→ Americas Countries </p></div>           
+                <div onClick={()=>filterRegion('Oceania')}><p id='oceania'>→ Oceania Countries</p></div>
+                <div onClick={()=>filterRegion('Polar')}><p id='polar'>→ Polar Countries</p></div>
              </div>
-           </div>     
-           
+           </div>          
         </div>
         <div className='sub-container'>
             
@@ -74,7 +67,6 @@ function SearchCountries() {
                 </thead>
                 <tbody>
 
-
                 {search.map((item)=>{
 
                     return(<tr>
@@ -87,11 +79,12 @@ function SearchCountries() {
 
                 </tbody>
             </table>
-
             
         </div>
         
     </section>
+    <div className='copy_right'>&#169; 2023 M Gopi Chandu</div>
+    </div>
     
   )
 }

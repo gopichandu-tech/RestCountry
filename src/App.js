@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <SearchCountries />
-      <div className='copy_right'>&#169; 2023 M Gopi Chandu</div>
     </div>
   );
 }
